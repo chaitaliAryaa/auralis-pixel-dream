@@ -70,8 +70,8 @@ export default function Dashboard() {
       <header className="sticky top-0 z-50 glass-card">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-xl gradient-hero flex items-center justify-center text-primary-foreground font-bold">H</div>
-            <span className="text-xl font-bold text-foreground hidden sm:inline">HabitFlow</span>
+            <div className="h-9 w-9 rounded-xl gradient-hero flex items-center justify-center text-primary-foreground font-bold">A</div>
+            <span className="text-xl font-bold text-foreground hidden sm:inline">Auralis</span>
           </div>
 
           <nav className="flex items-center gap-1">

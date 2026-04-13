@@ -45,8 +45,8 @@ export default function AuthPage() {
         <div className="w-full max-w-md space-y-8">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 mb-4">
-              <div className="h-10 w-10 rounded-xl gradient-hero flex items-center justify-center text-primary-foreground font-bold text-lg">H</div>
-              <span className="text-2xl font-bold text-foreground">HabitFlow</span>
+              <div className="h-10 w-10 rounded-xl gradient-hero flex items-center justify-center text-primary-foreground font-bold text-lg">A</div>
+              <span className="text-2xl font-bold text-foreground">Auralis</span>
             </div>
             <h2 className="text-xl font-semibold text-foreground">
               {isSignUp ? "Create your account" : "Welcome back"}

@@ -39,26 +39,26 @@ export default function YearPixels({ completionRates }: YearPixelsProps) {
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between flex-wrap gap-2">
         <h3 className="font-bold text-lg text-foreground">🎨 Year in Pixels</h3>
         <div className="flex items-center gap-3 text-xs text-muted-foreground">
-          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded bg-muted" /> None</span>
-          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded bg-habit-pink" /> Low</span>
-          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded bg-habit-yellow" /> Med</span>
-          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded bg-habit-blue" /> Good</span>
-          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded bg-habit-green" /> Great</span>
+          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-muted" /> None</span>
+          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-habit-pink" /> Low</span>
+          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-habit-yellow" /> Med</span>
+          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-habit-blue" /> Good</span>
+          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-habit-green" /> Great</span>
         </div>
       </div>
-      <div className="overflow-x-auto">
-        <div className="flex gap-2 min-w-[600px]">
+      <div className="overflow-x-auto pb-2">
+        <div className="inline-grid grid-cols-12 gap-x-3 gap-y-0" style={{ minWidth: 660 }}>
           {MONTHS.map((label, m) => (
-            <div key={m} className="flex flex-col items-center gap-0.5 flex-1">
+            <div key={m} className="flex flex-col items-center">
               <span className="text-[10px] text-muted-foreground font-medium mb-1">{label}</span>
-              <div className="grid grid-cols-1 gap-[2px]">
+              <div className="grid grid-cols-6 gap-[2px]">
                 {(byMonth[m] || []).map(p => (
                   <div
                     key={p.dateStr}
-                    className={`h-2.5 w-full rounded-[3px] ${getColor(p.rate)} transition-colors hover:scale-150 hover:z-10 cursor-default`}
+                    className={`h-[7px] w-[7px] rounded-[2px] ${getColor(p.rate)} transition-colors hover:scale-[2] hover:z-10 cursor-default`}
                     title={`${MONTHS[p.month]} ${p.day}: ${p.rate}%`}
                   />
                 ))}
